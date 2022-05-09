@@ -1,0 +1,180 @@
+print('Welcome to the Wage outcome machine - to get started please create a username')
+choice = input('Enter "Employee" or "Employer":')
+if choice == "Employer":
+    first = input('Enter first name of Employee:')
+    last = input('Enter last name of Employee:')
+    DOB = input('Enter a 4 digit code for the Employee:')
+    DOBLength = len(DOB)
+    Username = last + first + DOB 
+    last = last[0:4]  
+    first = first[0]
+    DOB = DOB[0:4]
+    if DOBLength == 4:
+        print('Employee code is: ' + last + first + DOB)
+        print('Thank you, please create a 5 digit password')
+        passw = input('Enter a 5 digit code, this will be YOUR password:')
+        passw = passw[0:5]
+    if passw == passw[0:5]:
+        print('Your Password is: ' + passw)
+        print('Okay, Please insert 3 productivity measures for ' + last + first + DOB )
+        print('NOTE: these inputs must be between 1 and 10')
+if choice == "Employee":
+    tel = input('Would you like to make an account? Please answer "Y" or "N": ')
+    if tel == "Y":
+        first = input('Enter first name:')
+        last = input('Enter last name:')
+        DOB = input('Enter a 4 digit code provided by Employer:')
+        DOBLength = len(DOB)
+        Username = last + first + DOB 
+        last = last[0:4]  
+        first = first[0]
+        DOB = DOB[0:4]
+        if DOBLength == 4:
+            print('Employee code is: ' + last + first + DOB)
+            print('Thank you, please create a 5 digit password')
+            passw = input('Enter a 5 digit code, this will be YOUR password:')
+            passw = passw[0:5]
+        if passw == passw[0:5]:
+            print('Your Password is: ' + passw)
+            print("Your cumulative score is not available - please contact Employer")
+            raise SystemExit("End of Session")
+
+        
+if DOBLength >= 5:
+    print("Invalid")
+if DOBLength < 4:
+    print("Invalid")
+
+#Wage calculator Starts HERE 
+def inputNumber(message):
+  while True:
+    try:
+       userInput = int(input(message))       
+    except ValueError:
+       print("Error.")
+       continue
+    else:
+       return userInput 
+       break 
+     
+
+#MAIN PROGRAM STARTS HERE:
+P = inputNumber("Insert Productivity measure = ")
+if P > 11: 
+    print("Error. Please restart and enter a number less than 10")
+    raise ValueError
+    
+P1 = inputNumber("Insert Productivity measure = ")
+if P < 11: 
+    print(P1)
+	
+P2 = inputNumber("Insert prodctivty measure = ")
+
+if 11 > P1:
+    print(P2)
+	
+if P1 > 11:
+	print("Error. Please restart and enter a number less than 10")
+	raise ValueError
+	
+if P2 > 11:
+	print("Error. Please restart and enter a number less than 10")
+	raise ValueError
+	
+sum = P1 + P + P2
+if sum < 30:
+    print("cumulative score = " + str(sum))
+	
+
+	
+
+#Wage Outcome Slotter 
+if sum == 1:
+    print("Wage 5000")
+if sum == 2:
+	print("Wage 5100")
+if sum == 3: 
+	print("Wage 5250")
+if sum == 4:
+    print("Wage 5500")
+if sum == 5:
+    print("Wage 5700")
+if sum == 6:
+    print("Wage 6000")
+
+if sum == 7:
+    print("Wage 6500")
+
+if sum == 8:
+    print("Wage 7000")
+
+if sum == 9:
+    print("Wage 8000")
+
+if sum == 10:
+    print("Wage 8500")
+
+if sum == 11:
+    print("Wage 9000")
+
+if sum == 12:
+    print("Wage 1000")
+
+if sum == 13:
+    print("Wage 12000")
+
+if sum == 14:
+    print("Wage 15000")
+
+if sum == 15:
+    print("Wage 17500")
+
+if sum == 16:
+    print("Wage 21000")
+
+if sum == 17:
+    print("Wage 25000")
+
+if sum == 18:
+    print("Wage 27000")
+
+if sum == 19:
+    print("Wage 30000")
+
+if sum == 20:
+    print("Wage 35000")
+
+if sum == 21:
+	print("Wage 40000")
+	
+if sum == 22:
+	print("Wage 45000")
+
+if sum == 23:
+	print("Wage 50000")
+
+if sum == 24: 
+	print("Wage 60000")
+
+if sum == 25:
+	print("Wage 70000")
+
+if sum == 26:
+	print("Wage 85000")
+
+if sum == 27:
+	print("Wage 95000")
+	
+if sum == 28:
+	print("Wage 105000")
+
+if sum == 29:
+	print("Wage 125000")
+
+if sum == 30:
+	print ("Wage 150000")
+
+
+
+
+		
